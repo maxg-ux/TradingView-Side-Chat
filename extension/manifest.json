@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "TradingView Chat Window",
+  "version": "1.0.0",
+  "description": "A separate, resizable chat side panel using your current TradingView session.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_title": "Open TradingView Chat Window"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "panel.html"
+      ],
+      "matches": [
+        "https://www.tradingview.com/*"
+      ]
+    }
+  ]
+}
